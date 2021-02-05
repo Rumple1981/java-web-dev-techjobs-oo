@@ -2,6 +2,7 @@ package org.launchcode.techjobs_oo;
 
 import java.util.Objects;
 
+// Constructor
 public class Employer {
     private int id;
     private static int nextId = 1;
@@ -16,6 +17,8 @@ public class Employer {
         this();
         this.value = value;
     }
+
+
 
     // Custom toString, equals, and hashCode methods:
 
@@ -38,6 +41,7 @@ public class Employer {
     }
 
     // Getters and Setters:
+
 
     public int getId() {
         return id;

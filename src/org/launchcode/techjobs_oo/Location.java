@@ -15,6 +15,16 @@ public class Location {
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
 
+    // ek constructor
+    public Location(String value) {
+        this.value = value;
+    }
+
+    // ek get - I don't think a setter is needed
+    public static int getNextId() {
+        return nextId;
+    }
+
 
     // Custom toString, equals, and hashCode methods:
 
