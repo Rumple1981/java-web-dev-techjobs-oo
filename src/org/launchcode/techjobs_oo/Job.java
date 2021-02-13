@@ -1,5 +1,7 @@
 package org.launchcode.techjobs_oo;
 
+import java.util.Objects;
+
 public class Job {
 
     private int id;
@@ -11,16 +13,91 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
-
-
-
     // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
     //  other five fields. The second constructor should also call the first in order to initialize
     //  the 'id' field.
 
+    public Job() {
+        this.id = nextId;    // this. is not needed but sure is easier to read as a constructor with it.
+        nextId++;
+    }
+
+    public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+        this();          // this() pulls in the elements coded into the original Job() constructor
+        this.name = name;
+        this.employer = employer;
+        this.location = location;
+        this.positionType = positionType;
+        this.coreCompetency = coreCompetency;
+    }
+
+//    public Job() {             // auto created by JobTest.java
+
+
+
+    public int getId() {      // auto created by JobTest.java
+    return id; }               // this gets called in JobTest.java
+
+
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
+    @Override   // auto generated
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Job job = (Job) o;
+        return id == job.id;
+    }
+
+    @Override   // auto generated
+    public int hashCode() {
+        return Objects.hash(id);
+    }
+
+
     // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
     //  and id.
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Employer getEmployer() {
+        return employer;
+    }
+
+    public void setEmployer(Employer employer) {
+        this.employer = employer;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
+    public PositionType getPositionType() {
+        return positionType;
+    }
+
+    public void setPositionType(PositionType positionType) {
+        this.positionType = positionType;
+    }
+
+    public CoreCompetency getCoreCompetency() {
+        return coreCompetency;
+    }
+
+    public void setCoreCompetency(CoreCompetency coreCompetency) {
+        this.coreCompetency = coreCompetency;
+    }
 }
