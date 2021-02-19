@@ -11,14 +11,20 @@ public class JobTest {  // not sure what this is called -- its more than a metho
     public Job job2;
     public Job job3;
     public Job job4;
+    public Job job5;
 
     @Before                        // Forgot this: to invent a testable object
     public void makeAJob() {
         job1 = new Job();
         job2 = new Job();
-        job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-        job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        job3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+        job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
+        //job5 = new Job("_______", new Employer("_______"), new Location("_______"), new PositionType("_______"), new CoreCompetency("_______"));
+        //ID:  _______ Name: _______ Employer: _______ Location: _______ Position Type: _______ Core Competency: _______);
     }
+
+
+
 
     @Test
     public void testSettingJobId() {
@@ -34,7 +40,20 @@ public class JobTest {  // not sure what this is called -- its more than a metho
     public void testJobsForEquality() {
         assertEquals(false,job3.equals(job4));
     }
-}
+
+    @Test
+    public void testToStringLineSpaces() {
+//        System.out.println(job4);
+        assertEquals(true, job4.toString().startsWith("\n"));
+        assertEquals(true, job4.toString().endsWith("\n"));
+        }
+    @Test
+    public void testToStringContainsLabels() {
+        System.out.println(job4);
+//      assertEquals(true, job4.toString().contains("\n"));
+        }
+    }
+
 
 
 

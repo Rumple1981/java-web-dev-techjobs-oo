@@ -1,6 +1,13 @@
 package org.launchcode.techjobs_oo;
 
 public class Main {
+
+    public static void main(String[] arg) {
+        Job job4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+
+        System.out.println(job4);
+    }
+
 //public static void main(String[] arg) {
 //        Job job1 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 //        Job job2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));

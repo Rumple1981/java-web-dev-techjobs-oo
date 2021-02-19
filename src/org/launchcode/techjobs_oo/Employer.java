@@ -27,6 +27,7 @@ public class Employer {
         return value;
     }
 
+
     @Override
     public boolean equals(Object o) {  // Two objects are equal if they have the same id.
         if (this == o) return true;

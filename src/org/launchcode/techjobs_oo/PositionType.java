@@ -23,11 +23,22 @@ public class PositionType {
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
 
    //EK
-    public String toString() {
-        return "PositionType{" +
-                "value='" + value + '\'' +
-                '}';
-    }
+//    success toString() method success - cribbed from location constructor
+   @Override
+   public String toString() {
+       return value;
+   }
+//    Failed toString() method two
+//   public String PositionType(String value) {
+//       return value;
+//    }
+
+//    Failed toString() method one
+//    public String toString() {
+//        return "PositionType{" +
+//                "value='" + value + '\'' +
+//                '}';
+//    }
 
 
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when

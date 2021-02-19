@@ -39,6 +39,12 @@ public class Job {
     return id; }               // this gets called in JobTest.java
 
 
+    //          toString() method
+    public String toString() {
+            return "\n" + "ID: " + id  + "\nName: " +name+ "\nEmployer: " +employer+ "\nLocation: " +location+ "\nPosition Type: " +positionType+ "\nCore Competency: " +coreCompetency+ "\n";
+        }
+
+
 
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
