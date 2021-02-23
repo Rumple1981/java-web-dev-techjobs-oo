@@ -5,17 +5,20 @@ import java.util.Objects;
 
 
 
-public class PositionType {
+//public class PositionType extends JobField {
+    public class PositionType {
     private int id;
     private static int nextId = 1;
     private String value;
 
     public PositionType() {
+
         id = nextId;
         nextId++;
     }
 
     public PositionType(String value) {
+        //        super(value);
         this();
         this.value = value;
     }
